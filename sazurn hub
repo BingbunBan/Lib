@@ -1,0 +1,22 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local button = Instance.new("TextButton")
+button.Parent = gui
+button.Size = UDim2.new(0, 900, 0, 500)
+button.Position = UDim2.new(0.5, -450, 0, 50)
+button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.TextScaled = true
+button.TextSize = 50
+button.Font = Enum.Font.SourceSansBold
+button.Text = "Dead Rails, Arsenal, Fisch Keyless scripts discord server. Click to Copy Invite"
+
+local inviteLink = "https://discord.gg/hF8B9k8aed"
+
+button.MouseButton1Click:Connect(function()
+    if setclipboard then
+        setclipboard(inviteLink)
+    end
+end)
